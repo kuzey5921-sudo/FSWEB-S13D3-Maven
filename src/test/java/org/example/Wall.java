@@ -1,17 +1,14 @@
 package org.example;
 
 public class Wall {
-    // 2 instance variable
     private double width;
     private double height;
 
-    // Constructor (2 parametreyi set etmeli)
     public Wall(double width, double height) {
         setWidth(width);
         setHeight(height);
     }
 
-    // İstenen 5 method
     public double getWidth() {
         return width;
     }
@@ -21,11 +18,19 @@ public class Wall {
     }
 
     public void setWidth(double width) {
-        this.width = (width < 0) ? 0 : width;
+        if (width < 0) {
+            this.width = 0;
+        } else {
+            this.width = width;
+        }
     }
 
     public void setHeight(double height) {
-        this.height = (height < 0) ? 0 : height;
+        if (height < 0) {
+            this.height = 0;
+        } else {
+            this.height = height;
+        }
     }
 
     public double getArea() {

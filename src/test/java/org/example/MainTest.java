@@ -1,30 +1,36 @@
 package org.example;
 
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+
 public class MainTest {
 
-    public static void main(String[] args) {
+    @Test
+    void testPerson() {
 
-        // Person test
-        Person person1 = new Person("John", "Doe", 20);
-        Person person2 = new Person("Ali", "Yılmaz", 16);
-        Person person3 = new Person("Ayşe", "Kaya", 12, "ayse@mail.com", "0555...", "Istanbul");
+        Person person = new Person("John", "Doe", 20);
 
-        System.out.println("Firstname: " + person1.getFirstName());
-        System.out.println("LastName: " + person1.getLastName());
-        System.out.println("Age: " + person1.getAge());
-        System.out.println("IsTeen: " + person1.isTeen());
+        assertEquals("John", person.getFirstName());
+        assertEquals("Doe", person.getLastName());
+        assertEquals(20, person.getAge());
+        assertFalse(person.isTeen());
 
-        System.out.println("IsTeen (person2): " + person2.isTeen());
-        System.out.println("IsTeen (person3): " + person3.isTeen());
+        Person teen = new Person("Alice", "Smith", 16);
 
-        // Wall test (sorudaki örnek)
-        Wall wall = new Wall(5, 4);
-        System.out.println("area= " + wall.getArea());
+        assertTrue(teen.isTeen());
+    }
+
+    @Test
+    void testWall() {
+
+        Wall wall = new Wall(5,4);
+
+        assertEquals(20.0, wall.getArea());
 
         wall.setHeight(-1.5);
 
-        System.out.println("width= " + wall.getWidth());
-        System.out.println("height= " + wall.getHeight());
-        System.out.println("area= " + wall.getArea());
+        assertEquals(5.0, wall.getWidth());
+        assertEquals(0.0, wall.getHeight());
+        assertEquals(0.0, wall.getArea());
     }
 }
