@@ -1,5 +1,5 @@
-package org.example;
-
+import org.example.Person;
+import org.example.Wall;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
