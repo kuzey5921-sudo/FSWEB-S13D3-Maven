@@ -21,7 +21,7 @@ public class Wall {
     }
 
     // getWidth
-    public double getWidth() {
+    public double getWidth(){
         return width;
     }
 

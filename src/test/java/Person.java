@@ -1,6 +1,6 @@
 
 
-public class Person {
+public class Person{
 
     // Instance variables
     private final String firstName;

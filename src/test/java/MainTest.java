@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class MainTest {
 
     @Test
-    void testPerson() {
+    void testPerson(){
 
         Person person = new Person("John", "Doe", 20);
 
