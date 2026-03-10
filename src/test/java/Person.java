@@ -3,9 +3,9 @@
 public class Person {
 
     // Instance variables
-    private String firstName;
-    private String lastName;
-    private int age;
+    private final String firstName;
+    private final String lastName;
+    private final int age;
 
     // Eklediğimiz 3 değişken
     private String gender;
